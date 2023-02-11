@@ -13,15 +13,14 @@ build:
 run-on: ubuntu-latest
 
 steps:
+uses: actions/checkout@v2
 
-- uses: actions/checkout@v2
-
-- name: Installing Node.
-- uses: actions/setup-node@v2-beta
+- name: Installing Node
+  uses: actions/setup-node@v2-
 with: 
 node-version 12
 
 - name: Installing surge
-- run: npm install --globall surge
+  run: npm install --globall surge
 - name: Deploy using surge
-- run: surge ./ bctm2020.surge.sh --token $ {{ serets.Surge_Token}}
+  run: surge ./ bctm2020.surge.sh --token $ {{ serets.Surge_Token}}
