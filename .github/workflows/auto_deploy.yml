@@ -16,7 +16,8 @@ steps:
 - name: Installing Node
   uses: actions/setup-node@v2-beta
 with: 
-  node-version 14
+  node-version 13
+
 - name: Installing surge
   run: npm install --globall surge
 - name: Deploy using surge
