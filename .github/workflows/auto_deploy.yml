@@ -3,8 +3,6 @@ name: BTCM2020
 on:
 push:
 branches: [main]
-pull_request:
-branche: [main]
 
 jobs:
 
@@ -13,10 +11,10 @@ build:
 run-on: ubuntu-latest
 
 steps:
-uses: actions/checkout@v2
+- uses: actions/checkout@v2s
 
 - name: Installing Node
-  uses: actions/setup-node@v2-
+  uses: actions/setup-node@v2-beta
 with: 
 node-version 12
 
